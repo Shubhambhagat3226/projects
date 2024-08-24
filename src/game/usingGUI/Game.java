@@ -85,6 +85,10 @@ public class Game {
         button2.setText("Attack the guard");
         button3.setText("Leave");
         button4.setText("");
+        button1.setVisible(true);
+        button2.setVisible(true);
+        button3.setVisible(true);
+        button4.setVisible(false);
     }
 
     public void talkToGuard(){
@@ -97,6 +101,10 @@ public class Game {
         button2.setText("");
         button3.setText("");
         button4.setText("");
+        button1.setVisible(true);
+        button2.setVisible(false);
+        button3.setVisible(false);
+        button4.setVisible(false);
     }
 
     public void choiceArea(){
@@ -154,6 +162,11 @@ public class Game {
         button2.setText("");
         button3.setText("");
         button4.setText("");
+
+        button1.setVisible(true);
+        button2.setVisible(false);
+        button3.setVisible(false);
+        button4.setVisible(false);
     }
 
     public void crossRoad(){
@@ -178,6 +191,11 @@ public class Game {
         button2.setText("");
         button3.setText("");
         button4.setText("");
+
+        button1.setVisible(true);
+        button2.setVisible(false);
+        button3.setVisible(false);
+        button4.setVisible(false);
     }
 
     public void east(){
@@ -195,6 +213,11 @@ public class Game {
         button2.setText("");
         button3.setText("");
         button4.setText("");
+
+        button1.setVisible(true);
+        button2.setVisible(false);
+        button3.setVisible(false);
+        button4.setVisible(false);
     }
 
     public void west(){
@@ -207,9 +230,15 @@ public class Game {
             mainTextArea.setText("You walked into the forest.");
             button1.setText(">");
             button2.setText("");
+            button2.setVisible(true);
         }
         button3.setText("");
         button4.setText("");
+
+        button1.setVisible(true);
+        button2.setVisible(false);
+        button3.setVisible(false);
+        button4.setVisible(false);
     }
 
     public void fight(){
@@ -220,6 +249,10 @@ public class Game {
         button2.setText("Run");
         button3.setText("");
         button4.setText("");
+        button1.setVisible(true);
+        button2.setVisible(true);
+        button3.setVisible(false);
+        button4.setVisible(false);
     }
 
     public void playerAttack(){
@@ -237,6 +270,11 @@ public class Game {
         button2.setText("");
         button3.setText("");
         button4.setText("");
+
+        button1.setVisible(true);
+        button2.setVisible(false);
+        button3.setVisible(false);
+        button4.setVisible(false);
     }
 
     public void monsterAttack(){
@@ -251,6 +289,10 @@ public class Game {
         button3.setText("");
         button4.setText("");
 
+        button1.setVisible(true);
+        button2.setVisible(false);
+        button3.setVisible(false);
+        button4.setVisible(false);
     }
 
     public void win(){
@@ -262,6 +304,11 @@ public class Game {
         button2.setText("");
         button3.setText("");
         button4.setText("");
+
+        button1.setVisible(true);
+        button2.setVisible(false);
+        button3.setVisible(false);
+        button4.setVisible(false);
     }
 
     public void lose(){
