@@ -177,6 +177,11 @@ public class Game {
         button2.setText("Go east");
         button3.setText("Go south");
         button4.setText("Go west");
+
+        button1.setVisible(true);
+        button2.setVisible(true);
+        button3.setVisible(true);
+        button4.setVisible(true);
     }
 
     public void north(){
@@ -226,17 +231,17 @@ public class Game {
             mainTextArea.setText("You encounter a goblin!");
             button1.setText("Fight");
             button2.setText("Run");
+            button2.setVisible(true);
         } else {
             mainTextArea.setText("You walked into the forest.");
             button1.setText(">");
             button2.setText("");
-            button2.setVisible(true);
+            button2.setVisible(false);
         }
         button3.setText("");
         button4.setText("");
 
         button1.setVisible(true);
-        button2.setVisible(false);
         button3.setVisible(false);
         button4.setVisible(false);
     }
