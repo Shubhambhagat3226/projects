@@ -156,7 +156,7 @@ public class Game {
         position = "attackGuard";
         mainTextArea.setText("Guard: Hey don't be stupid.\n\n" +
                 "Guard fought back and hit you hard.\n" +
-                "You receive 3 damage)");
+                "(You receive 3 damage)");
         playerDetail.setPlayerHP(-3);
         button1.setText(">");
         button2.setText("");
