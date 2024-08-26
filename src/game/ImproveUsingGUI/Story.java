@@ -76,7 +76,7 @@ public class Story {
             ui.mainTextArea.setText("Guard: Hello stranger. " +
                     "I have never seen your face." +
                     "\nI am sorry but we cannot let a stranger enter our town.");
-            ui.button1.setText(">");
+            ui.button1.setText("next >");
             ui.button2.setText("");
             ui.button3.setText("");
             ui.button4.setText("");
@@ -94,7 +94,7 @@ public class Story {
                 "Guard fought back and hit you hard.\n" +
                 "(You receive 3 damage)");
         player.setHp(-3,ui);
-        ui.button1.setText(">");
+        ui.button1.setText("next >");
         ui.button2.setText("");
         ui.button3.setText("");
         ui.button4.setText("");
@@ -136,8 +136,11 @@ public class Story {
                 "You drink the water and rest at the riverside.");
         if (player.hp < 19) {
             ui.mainTextArea.append("\n\n(Your HP is recovered by 2)");
+            player.setHp(2,ui);
+        } else if (player.hp == 19) {
+            ui.mainTextArea.append("\n\n(Your HP is recovered by 1)");
+            player.setHp(1,ui);
         }
-        player.setHp(2,ui);
         ui.button1.setText("Go South");
         ui.button2.setText("");
         ui.button3.setText("");
@@ -195,7 +198,7 @@ public class Story {
 
         } else {
             ui.mainTextArea.setText("You walked into the forest.");
-            ui.button1.setText(">");
+            ui.button1.setText("next >");
             ui.button2.setText("");
             ui.button2.setVisible(false);
 
@@ -233,7 +236,7 @@ public class Story {
                 + " and give " + playerDamage + " damage!");
         monster.setHp(-playerDamage);
 
-        ui.button1.setText(">");
+        ui.button1.setText("next >");
         ui.button2.setText("");
         ui.button3.setText("");
         ui.button4.setText("");
@@ -258,7 +261,7 @@ public class Story {
                 + monsterDamage + " damage!");
         player.setHp(-monsterDamage,ui);
 
-        ui.button1.setText(">");
+        ui.button1.setText("next >");
         ui.button2.setText("");
         ui.button3.setText("");
         ui.button4.setText("");
@@ -314,11 +317,14 @@ public class Story {
                 "Thank you so much. you are a true hero!" +
                 "\nWelcome to our town!\n\n<THE END>");
 
-        ui.button1.setText("");
+        ui.button1.setText("<END>");
         ui.button2.setText("");
         ui.button3.setText("");
         ui.button4.setText("");
-        ui.button1.setVisible(false);
+
+        game.position1 = "toTitle";
+
+        ui.button1.setVisible(true);
         ui.button2.setVisible(false);
         ui.button3.setVisible(false);
         ui.button4.setVisible(false);
